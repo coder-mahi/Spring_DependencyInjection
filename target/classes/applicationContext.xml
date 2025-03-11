@@ -1,0 +1,17 @@
+<beans>
+    <bean id="drds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/yourDatabase"/>
+        <property name="username" value="root"/>
+        <property name="password" value="mahesh"/>
+    </bean>
+    <bean id="stDao" class="com.di.dao.StudentDAOImpl">
+        <constructor-arg ref="drds"/>
+    </bean>
+    <bean id="stService" class="com.di.service.StudentServiceImpl">
+        <constructor-arg ref="stDao"/>
+    </bean>
+    <bean id="stController" class="com.di.controller.StudentController">
+        <constructor-arg ref="stService"/>
+    </bean>
+</beans>
