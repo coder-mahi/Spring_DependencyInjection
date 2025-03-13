@@ -10,11 +10,9 @@
         <property name="username" value="root"/>
         <property name="password" value="mahesh"/>
     </bean>
-
     <bean id="stDao" class="com.di.dao.StudentDAOImpl">
         <constructor-arg ref="drds"/>
     </bean>
-
     <bean id="stService" class="com.di.service.StudentServiceImpl">
         <constructor-arg ref="stDao"/>
     </bean>

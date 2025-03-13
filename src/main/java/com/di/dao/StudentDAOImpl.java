@@ -1,22 +1,17 @@
 package com.di.dao;
 
 import java.sql.Connection;
-// import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 import javax.sql.DataSource;
-
 import com.di.bo.StudentBO;
 
-public class StudentDAOImpl implements StudentDAO {
+public class StudentDAOImpl implements StudentDAO{
     private static final String STUDENT_INSERT_QUERY = "INSERT INTO SP_STUDENT VALUES(?,?,?,?,?)";
     private DataSource dataSource;
-
-    public StudentDAOImpl(DataSource dataSource) {
+    public StudentDAOImpl(DataSource dataSource){
         this.dataSource = dataSource;
     }
-
     @Override
     public int insert(StudentBO bo) {
         int result = 0;

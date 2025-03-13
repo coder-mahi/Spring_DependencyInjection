@@ -11,7 +11,9 @@ public class ClientApp {
         StudentController controller = context.getBean("stController", StudentController.class);
         // System.out.println(controller.process("101", "mahesh", "67", "10000", "1000"));
         // System.out.println(controller.process("102", "jon", "35", "3000", "100"));
-        System.out.println(controller.process("103", "robb", "50", "4000", "10"));
+        // System.out.println(controller.process("103", "robb", "50", "4000", "10"));
+        // System.out.println(controller.process("104", "joffree", "20", "100", "0"));
+        System.out.println(controller.process("105", "ned", "4100", "666", "320"));
 
     }
 }
